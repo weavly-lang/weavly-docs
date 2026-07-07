@@ -1,0 +1,47 @@
+site_name: Weavly
+site_description: Documentation for the Weavly dialog scripting language and its tooling.
+site_url: https://weavly-lang.github.io/weavly-docs/
+repo_url: https://github.com/weavly-lang/weavly-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Language Reference:
+      - Overview: language/index.md
+      - Statements: language/statements.md
+      - Variables (@env): language/env.md
+      - Expressions: language/expressions.md
+  - Compiler (CLI): compiler/index.md
+  - Godot Addon: godot/index.md
+  - VS Code Extension: vscode/index.md
