@@ -4,6 +4,10 @@ site_url: https://weavly-lang.github.io/weavly-docs/
 repo_url: https://github.com/weavly-lang/weavly-docs
 edit_uri: edit/main/docs/
 
+validation:
+  links:
+    anchors: warn
+
 theme:
   name: material
   palette:
@@ -64,4 +68,3 @@ nav:
       - Starter UIs: godot/ui.md
       - Editor: godot/editor.md
       - API reference: godot/api.md
-  - VS Code Extension: vscode/index.md
