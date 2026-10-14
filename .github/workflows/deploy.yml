@@ -30,7 +30,8 @@ jobs:
           sparse-checkout: addons/weavly/editor/wvl_syntax_highlighter.gd
           sparse-checkout-cone-mode: false
       - run: python scripts/check_colors.py addon/addons/weavly/editor/wvl_syntax_highlighter.gd
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt "weavly==0.7.*"
+      - run: python scripts/check_examples.py
       - run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
         with:
