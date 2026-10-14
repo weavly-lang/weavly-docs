@@ -17,7 +17,7 @@ Weavly is a dialog scripting language. _One-line pitch goes here._
 
 | Component | Repo |
 | --- | --- |
-| Compiler | [`weavly-lang/compiler`](https://github.com/weavly-lang/compiler) |
+| Compiler | [`weavly-lang/weavly-compiler`](https://github.com/weavly-lang/weavly-compiler) |
 | Godot addon | [`weavly-lang/godot-addon`](https://github.com/weavly-lang/godot-addon) |
 | VS Code extension | [`weavly-lang/vs-code-extension`](https://github.com/weavly-lang/vs-code-extension) |
 | Demos | [`weavly-lang/godot-demos`](https://github.com/weavly-lang/godot-demos) |
