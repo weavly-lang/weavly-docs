@@ -34,6 +34,8 @@ mkdocs build --strict
 - `check_colors.py` compares `docs/stylesheets/wvl.css` with the color constants of the addon's `.wvl` editor. Change both together.
 - `mkdocs build --strict` fails on broken links and anchors.
 
+CI runs on every PR and every push to `main`, with the compiler pinned. A weekly run, `upstream-latest.yml`, checks the examples against the newest compiler release and the colors against the addon's `main`. When it fails, the docs need an update for what changed upstream.
+
 ## Writing
 
 - Tag Weavly code ```` ```wvl ```` and GDScript ```` ```gdscript ````. Indent GDScript with tabs, like Godot's script editor, so it pastes cleanly.
