@@ -8,7 +8,7 @@ Statements are the lines of a node that start with a keyword. Each takes one lin
 
 `@set` gives a [variable](env.md#variables) a new value:
 
-```
+```wvl
 @set gold = 10
 @set greeting = "Hello, {player_name}!"
 @set has_key = gold > 5 and not cursed
@@ -20,7 +20,7 @@ The value must have the variable's type. Setting a number outside its [range](en
 
 `@increase` and `@decrease` add to or take from a number variable. The amount defaults to 1 and can be any number expression:
 
-```
+```wvl
 @increase visits
 @increase gold 10
 @decrease health damage * 2
@@ -34,7 +34,7 @@ The value must have the variable's type. Setting a number outside its [range](en
 
 `@jump` moves to another node for good:
 
-```
+```wvl
 @jump Village
 ```
 
@@ -44,7 +44,7 @@ Everything the dialogue was going to return to is dropped: after a `@jump`, the 
 
 `@detour` runs another node, then continues after the `@detour` once that node ends:
 
-```
+```wvl
 @node Shop
 @detour Greeting
 What would you like to buy?
@@ -63,7 +63,7 @@ There's no `@return`: a detour returns when its node runs out of statements.
 
 `@draw` picks one node from one or more [pools](meta.md) and runs it like a detour:
 
-```
+```wvl
 @draw camp_events
 @draw forest_events, weather_events
 ```
@@ -74,7 +74,7 @@ If no node in the pools is eligible, nothing happens and the dialogue continues.
 
 `@finish` ends the whole dialogue at once, even inside a detour:
 
-```
+```wvl
 @if health <= 0: @finish
 ```
 
@@ -84,7 +84,7 @@ A dialogue also finishes when a node ends and there's no detour to return to.
 
 `@jump`, `@detour` and `@draw` take a name or a variable of the matching type. A `node` variable lets the script decide later where to go:
 
-```
+```wvl
 @env
 var next_room: node = Hall
 @endenv
@@ -102,7 +102,7 @@ var next_room: node = Hall
 
 `@do` calls a [function the game provides](env.md#functions) and ignores its result:
 
-```
+```wvl
 @do play_sound("door_creak", 0.8)
 @do shake_screen(2)
 ```

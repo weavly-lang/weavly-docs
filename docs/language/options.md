@@ -2,7 +2,7 @@
 
 An `@options` block offers the player a choice:
 
-```
+```wvl
 @options
 @option "Open the door"
     The door creaks open.
@@ -20,7 +20,7 @@ If a block has nothing to show, for example because every condition is false, th
 
 Every option is a node. A block offers nodes in three ways, and shows them in the order they're written:
 
-```
+```wvl
 @options
 @option "Wait": You wait for a while.
 @option node(HackTerminal)
@@ -38,7 +38,7 @@ An inline option is an anonymous node: it has no id, no `@meta`, and no visit co
 
 `@option node(Id)` offers an existing node. The node needs a `label` in its [`@meta`](#option-keys), which is the text the player sees, and its `when` decides whether it's shown:
 
-```
+```wvl
 @node HackTerminal
 @meta
 label: "Hack the terminal"
@@ -56,7 +56,7 @@ To offer several nodes, write one `@option node(...)` line each. A `node` variab
 
 Pools come first, then named parameters:
 
-```
+```wvl
 @option pool(camp_actions, night_actions, limit: 3, shuffle: false, locked: hide)
 ```
 
@@ -85,7 +85,7 @@ The label keys take any string expression, such as `label: "Buy for {price} gold
 
 A locked option is shown but can't be chosen. It's how a choice the player can't take yet stays visible:
 
-```
+```wvl
 @node BuySword
 @meta
 label: "Buy the sword"
@@ -115,7 +115,7 @@ label_teaser: "???"
 
 `@continue` is a block with a single option, for a pause the player clicks through:
 
-```
+```wvl
 @continue "Onward"
 @continue "Follow her": @jump Alley
 ```

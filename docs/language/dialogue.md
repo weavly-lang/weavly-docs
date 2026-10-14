@@ -2,7 +2,7 @@
 
 A dialogue line is a speaker, a colon, a space and the text:
 
-```
+```wvl
 @env
 character Anna
 character Ben
@@ -25,7 +25,7 @@ A speaker is one of:
 - **A declared character**, written as its name. Characters are declared in [`@env`](env.md#characters) with `character Anna`.
 - **A `character` variable**, which speaks as whichever character it holds:
 
-    ```
+    ```wvl
     @env
     character Anna
     character Ben
@@ -39,7 +39,7 @@ A speaker is one of:
 
 - **A quoted string**, for a one-off speaker that isn't worth declaring. It takes interpolation and escapes like any [quoted string](text.md#quoted-strings):
 
-    ```
+    ```wvl
     "Old Man": You shouldn't be here.
     "{Anna} and {Ben}": Surprise!
     ```
@@ -58,7 +58,7 @@ A line with several speakers, like `"{Anna} and {Ben}"` above, is a one-off spea
 
 Whether a line is dialogue depends only on its shape: a name or quoted string, a colon and a space. A narration line that happens to have that shape needs `\:`:
 
-```
+```wvl
 Day 3\: The village is quiet.
 ```
 
@@ -70,7 +70,7 @@ The compiler also warns about narration lines that look like dialogue: a `:` fol
 
 There's no special syntax for these. Call a [game function](env.md#functions) before the line:
 
-```
+```wvl
 @do portrait(Anna, "angry")
 Anna: You did what?
 ```

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weavly-pygments"
+version = "0.1.0"
+description = "Pygments lexer for Weavly, matching the Godot addon's editor colors."
+requires-python = ">=3.10"
+dependencies = ["pygments"]
+
+[project.entry-points."pygments.lexers"]
+wvl = "weavly_pygments:WvlLexer"
+
+[tool.setuptools]
+py-modules = ["weavly_pygments"]

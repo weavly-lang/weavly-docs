@@ -1,0 +1,32 @@
+/* The colors of the Godot addon's .wvl editor (WvlSyntaxHighlighter); scripts/check_colors.py keeps them in sync. */
+:root {
+  --wvl-background: #1d2229;
+  --wvl-text: #dbdbdb;
+  --wvl-directive: #e675b3;
+  --wvl-variable: #e69952;
+  --wvl-string: #ccd675;
+  --wvl-number: #66b3eb;
+  --wvl-character: #75ccb8;
+  --wvl-comment: #808080;
+  --wvl-keyword: #a899fa;
+  --wvl-function: #f5db80;
+  --wvl-meta: #bde0ff;
+  --wvl-node: #ff8c80;
+}
+
+.md-typeset .language-wvl {
+  --md-code-bg-color: var(--wvl-background);
+  --md-code-fg-color: var(--wvl-text);
+  color-scheme: dark;
+}
+
+.md-typeset .language-wvl .kr { color: var(--wvl-directive); }
+.md-typeset .language-wvl .nv { color: var(--wvl-variable); }
+.md-typeset .language-wvl .s { color: var(--wvl-string); }
+.md-typeset .language-wvl .m { color: var(--wvl-number); }
+.md-typeset .language-wvl .ni { color: var(--wvl-character); }
+.md-typeset .language-wvl .c { color: var(--wvl-comment); font-style: normal; }
+.md-typeset .language-wvl .k { color: var(--wvl-keyword); }
+.md-typeset .language-wvl .nf { color: var(--wvl-function); }
+.md-typeset .language-wvl .na { color: var(--wvl-meta); }
+.md-typeset .language-wvl .nl { color: var(--wvl-node); }

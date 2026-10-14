@@ -2,7 +2,7 @@
 
 Weavly is a language for writing branching dialogue. You write `.wvl` files, the [compiler](../compiler/index.md) turns them into JSON, and a runtime such as the [Godot addon](../godot/index.md) plays that JSON in your game.
 
-```
+```wvl
 @env
 character Guide
 var met_guide: bool
@@ -49,7 +49,7 @@ All files of a project share one set of names: a variable declared in one file c
 
 A node is a named piece of dialogue. Everything the player sees and does happens inside one:
 
-```
+```wvl
 @node CaveEntrance
 You stand at the mouth of a cave.
 @endnode
@@ -75,7 +75,7 @@ Blocks end with their own closing keyword: `@endnode`, `@endif`, `@endoptions`, 
 
 `#` starts a comment that runs to the end of the line. A comment can sit on its own line or at the end of a statement:
 
-```
+```wvl
 # The guard only talks once.
 @node Guard
 @set guard_met = true  # remembered for later visits

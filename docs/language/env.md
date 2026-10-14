@@ -2,7 +2,7 @@
 
 Everything a script uses besides nodes is declared in an `@env` block:
 
-```
+```wvl
 @env
 var score: number(0, 100) = 0
 var player_name: string = "Hero"
@@ -31,7 +31,7 @@ Each line starts with its kind. A file can have several `@env` blocks, and the b
 | `bool` | `true` or `false` | `false` |
 | `node`, `pool`, `slot`, `character` | a node, pool, slot or character | none, a default is required |
 
-```
+```wvl
 @env
 var gold: number = 20
 var visited_city: bool
@@ -45,7 +45,7 @@ Defaults are constants: a number, a quoted string without `{}`, `true` or `false
 
 A `number` can have a range, `(min, max)`. Either side can be left out:
 
-```
+```wvl
 @env
 var health: number(0, 100) = 100
 var debt: number(0,) = 0
@@ -59,7 +59,7 @@ The default must fit the range. While the game runs, a value outside the range i
 
 `extern var` declares a variable that the game sets, not the script:
 
-```
+```wvl
 @env
 extern var player_level: number
 extern var player_class: string
@@ -72,7 +72,7 @@ It has no default and no range. Scripts read and change it like any other variab
 
 `character Name` declares a character that can [speak](dialogue.md):
 
-```
+```wvl
 @env
 character Anna
 character Narrator
@@ -85,7 +85,7 @@ The declaration holds only the id. The game owns the [display name](dialogue.md#
 
 `pool name` and `slot name` declare the pools and slots that [storylets](meta.md) join:
 
-```
+```wvl
 @env
 pool camp_events
 slot weather
@@ -96,7 +96,7 @@ slot weather
 
 `meta name: type = default` declares a custom [meta key](meta.md#custom-keys) that nodes can set in their `@meta` block:
 
-```
+```wvl
 @env
 meta cost: number = 1
 meta mood: string = "calm"
@@ -109,7 +109,7 @@ Defaults work like those of variables, but meta keys take no range. A node that 
 
 `func name(parameter: type, ...)` declares a function the game provides. A return type after the parentheses makes it usable in expressions:
 
-```
+```wvl
 @env
 func trust(from: character, to: character): number
 func has_item(item: string): bool
@@ -133,7 +133,7 @@ A call passes exactly the declared parameters. There are no optional or variadic
 
 A parameter of type `var <type>` takes a variable instead of its value, so the game can change it:
 
-```
+```wvl
 @env
 var gold: number = 20
 func add_loot(target: var number, amount: number)

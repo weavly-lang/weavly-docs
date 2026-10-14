@@ -8,7 +8,7 @@ The main use is **storylets**: nodes that join a pool, and that the game or scri
 
 The `@meta` block comes right after the `@node` line and holds `key: value` entries:
 
-```
+```wvl
 @node FindTreasure
 @meta
 pool: cave_events
@@ -51,7 +51,7 @@ When a pool is listed, by [`@draw`](#draw), a [`pool(...)` option](options.md#po
 
 A fallback is a node in the pool with a low priority and no `when`: it's picked only when nothing better is eligible.
 
-```
+```wvl
 @node QuietNight
 @meta
 pool: camp_events
@@ -73,7 +73,7 @@ Nodes that share a slot exclude each other: at most one of them is taken per lis
 
 `@draw` takes the first node of the listing and runs it like a [detour](statements.md#detour):
 
-```
+```wvl
 @node Camp
 You set up camp for the night.
 @draw camp_events
@@ -87,7 +87,7 @@ If no node is eligible, nothing is drawn and the dialogue continues.
 
 A [declared meta key](env.md#meta-keys) can be set on any node, with a value of the declared type:
 
-```
+```wvl
 @env
 meta cost: number = 0
 @endenv
@@ -107,7 +107,7 @@ Values are expressions, evaluated each time they're read. A node that doesn't se
 
 `.key` reads a value of the current node, and `Node.key` one of another node:
 
-```
+```wvl
 @if gold >= RentRoom.cost: You can afford a room.
 ```
 

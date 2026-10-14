@@ -4,7 +4,7 @@
 
 Any line inside a node that isn't a keyword, a comment or [dialogue](dialogue.md) is narration:
 
-```
+```wvl
 @node Tavern
 The tavern is warm and loud.
 Someone is playing a fiddle in the corner.
@@ -17,7 +17,7 @@ Each narration line is shown on its own and pauses until the player continues. S
 
 Text can hold [expressions](expressions.md) in `{}`. They're evaluated when the line is shown, and the result is put into the text:
 
-```
+```wvl
 You have {gold} gold.
 The room costs {base_price * markup} gold.
 ```
@@ -47,7 +47,7 @@ A `}` outside an expression is plain text and needs no escape. Any other backsla
 
 On narration and dialogue lines, `#` is text, not a comment:
 
-```
+```wvl
 Prices start at #5.
 ```
 
@@ -57,14 +57,14 @@ Comments work at the end of every other line and on lines of their own.
 
 Strings in `"..."` appear in expressions, option labels, [`@continue`](options.md#continue), one-off speakers and `@meta` values:
 
-```
+```wvl
 @set title = "Captain"
 @option "Ask about the ship": @detour Ship
 ```
 
 A quoted string is kept exactly as written, spaces included. It takes the same `{}` interpolation as a line:
 
-```
+```wvl
 @set greeting = "Hello, {player_name}!"
 ```
 

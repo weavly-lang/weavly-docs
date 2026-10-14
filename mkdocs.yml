@@ -34,6 +34,7 @@ markdown_extensions:
       permalink: true
   - pymdownx.highlight:
       anchor_linenums: true
+      pygments_lang_class: true
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -68,3 +69,9 @@ nav:
       - Starter UIs: godot/ui.md
       - Editor: godot/editor.md
       - API reference: godot/api.md
+
+hooks:
+  - hooks/wvl_names.py
+
+extra_css:
+  - stylesheets/wvl.css

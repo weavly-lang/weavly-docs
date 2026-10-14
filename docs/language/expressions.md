@@ -69,7 +69,7 @@ Each place takes a type:
 
 Without an argument, they mean the node they're written in:
 
-```
+```wvl
 @node Shrine
 @if visited(): The shrine is as quiet as last time.
 @if visit_count(Tavern) > 3: You smell of ale.
@@ -86,6 +86,6 @@ A node counts as visited [when it ends](statements.md#visits). The argument is a
 
 Functions the game provides are called like built-in ones, once they're [declared](env.md#functions) with a return type:
 
-```
+```wvl
 @if trust(Anna, Ben) > 5: Anna: I'd trust him with my life.
 ```
