@@ -39,9 +39,29 @@ nav:
   - Getting Started: getting-started.md
   - Language Reference:
       - Overview: language/index.md
+      - Text: language/text.md
+      - Dialogue: language/dialogue.md
       - Statements: language/statements.md
-      - Variables (@env): language/env.md
+      - Conditions and randomness: language/blocks.md
+      - Options: language/options.md
       - Expressions: language/expressions.md
-  - Compiler (CLI): compiler/index.md
-  - Godot Addon: godot/index.md
+      - Declarations (@env): language/env.md
+      - Storylets and meta: language/meta.md
+      - Limitations: language/limitations.md
+  - Compiler (CLI):
+      - Installation and usage: compiler/index.md
+      - Errors and warnings: compiler/diagnostics.md
+      - Build output: compiler/output.md
+  - Godot Addon:
+      - Installation: godot/index.md
+      - Quick start: godot/quickstart.md
+      - Running dialogue: godot/engine.md
+      - Variables and functions: godot/game-data.md
+      - Characters: godot/characters.md
+      - Storylets and pools: godot/storylets.md
+      - Saving and loading: godot/saving.md
+      - Custom services: godot/services.md
+      - Starter UIs: godot/ui.md
+      - Editor: godot/editor.md
+      - API reference: godot/api.md
   - VS Code Extension: vscode/index.md

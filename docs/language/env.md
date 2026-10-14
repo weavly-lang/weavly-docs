@@ -1,8 +1,8 @@
-# Variables (`@env`)
+# Declarations (`@env`)
 
 !!! note "Placeholder"
-    Scaffold page — document variable declarations here.
+    Scaffold page — document declarations here.
 
-Variables are declared in `@env ... @endenv` blocks.
+Variables, characters, pools, slots, meta keys, and functions are declared in `@env ... @endenv` blocks.
 
-_Document declaration syntax, types, project-wide merging into `env.json`, and duplicate-name errors here._
+_Document every declaration kind, types and ranges, `extern var`, `var` parameters, and the project-wide namespace here._

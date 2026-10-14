@@ -1,14 +1,18 @@
 # Statements
 
 !!! note "Placeholder"
-    Scaffold page — document each statement type here.
+    Scaffold page — document each line statement here.
 
-Weavly statements come in two shapes: **line statements** and **block statements**.
+Line statements each take one line. Blocks are covered in [Conditions and randomness](blocks.md) and [Options](options.md).
 
-## Line statements
+## Variables
 
-_Document line statements here (e.g. dialog lines, narration, set, goto, commands, flags)._
+_Document `@set`, `@increase`, and `@decrease` here._
 
-## Block statements
+## Flow
 
-_Document block statements here (e.g. if, match, options)._
+_Document `@jump`, `@detour`, `@draw`, and `@finish` here._
+
+## Game functions
+
+_Document `@do` here._

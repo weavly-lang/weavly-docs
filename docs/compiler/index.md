@@ -5,10 +5,14 @@
 
 The `weavly` command-line tool compiles `.wvl` source files to JSON.
 
+## Installation
+
+_Document installing and upgrading the compiler here._
+
 ## Commands
 
 _Document `weavly init`, `weavly build`, and their options here._
 
-## Output
+## Project layout
 
-_Document the build output layout (per-file node JSON + merged `env.json`) here._
+_Document the `src/` and `build/` folders here. The output format is in [Build output](output.md)._

@@ -3,4 +3,4 @@
 !!! note "Placeholder"
     Scaffold page — document expression syntax here.
 
-_Document operators, comparisons, and how expressions are used in conditions here._
+_Document operators and precedence, types, conditions, variable targets, and built-in functions here._
