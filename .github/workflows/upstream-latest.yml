@@ -1,0 +1,31 @@
+name: Upstream latest
+
+# The docs workflow pins the compiler and only runs when the docs change.
+# This run is where a new compiler release or an addon color change shows up instead.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/checkout@v4
+        with:
+          repository: weavly-lang/weavly-godot-addon
+          path: addon
+          sparse-checkout: addons/weavly/editor/wvl_syntax_highlighter.gd
+          sparse-checkout-cone-mode: false
+      - run: python scripts/check_colors.py addon/addons/weavly/editor/wvl_syntax_highlighter.gd
+      - run: pip install weavly
+      - run: weavly --version
+      - run: python scripts/check_examples.py
