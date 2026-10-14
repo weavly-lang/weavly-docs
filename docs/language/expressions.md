@@ -35,6 +35,8 @@ Comparisons don't chain: `1 < x < 5` is an error. Write `1 < x and x < 5`.
 
 `+` only adds numbers. To join strings, use interpolation: `"{first} {last}"`.
 
+Dividing by zero is a runtime error: the game reports it, and the result is `0`.
+
 ## Types
 
 Every expression has a type, checked when the project is built:
@@ -56,7 +58,7 @@ Each place takes a type:
 | `random(a, b)` | a random whole number from `a` to `b`, both included |
 | `min(a, b, ...)`, `max(a, b, ...)` | the smallest or largest of two or more numbers |
 | `clamp(x, low, high)` | `x` kept between `low` and `high` |
-| `round(x)`, `floor(x)`, `ceil(x)` | `x` rounded to the nearest, next lower or next higher whole number |
+| `round(x)`, `floor(x)`, `ceil(x)` | `x` rounded to the nearest, next lower or next higher whole number. `round` rounds halves away from zero: `round(2.5)` is `3`. |
 | `abs(x)` | `x` without its sign |
 
 ## Node functions

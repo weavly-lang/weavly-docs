@@ -104,12 +104,11 @@ label_teaser: "???"
 | true | false | shown locked with `label_unavailable`, or hidden without it |
 | false | either | shown locked with `label_teaser`, or hidden without it |
 
-## While options are shown
+## When options are evaluated
 
-- Which options are offered, and their order, is fixed when the block is shown.
-- Labels and locked states stay live: if a variable changes while the options are on screen, they update.
-- An option whose `when` turns false disappears, unless it has a `label_teaser`.
-- Choosing an option checks it again, and its meta values are fixed at that moment.
+Options are evaluated once, when the block is shown: which ones are offered, their order, their labels, and whether they're locked. They don't change while they're on screen, even if a variable changes.
+
+A node option also keeps the meta values it had when it was offered. When the player chooses it, the node reads those values, so a label like `"Rent a room ({.cost} gold)"` always matches the `.cost` the node then uses.
 
 ## `@continue`
 
