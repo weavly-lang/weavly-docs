@@ -1,6 +1,6 @@
 # weavly-docs
 
-Documentation site for the [Weavly](https://github.com/weavly-lang) dialog scripting language and its tooling
+Documentation site for the [Weavly](https://github.com/weavly-lang) dialogue scripting language and its tooling
 (compiler and Godot addon).
 
 Built with [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
